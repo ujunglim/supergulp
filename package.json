@@ -1,0 +1,11 @@
+{
+  "name": "supergulp",
+  "version": "1.0.0",
+  "description": "Awesome development environment building with gulp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ujunglim/supergulp.git"
+  },
+  "author": "Yujung",
+  "homepage": "https://github.com/ujunglim/supergulp#readme"
+}
