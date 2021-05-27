@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "del": "^6.0.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-sass": "^4.1.0",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^6.0.0"
   }
 }
