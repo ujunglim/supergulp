@@ -16,7 +16,7 @@ const routes = {
     src: "src/*.pug",
     dest: "build"
   },
-  sass: {
+  scss: {
     watch: "src/scss/**/*.scss",
     src: "src/scss/style.scss",
     dest: "build/css"
@@ -39,11 +39,11 @@ const pug = () =>
 
 const styles = () => 
   gulp
-    .src(routes.sass.src)
+    .src(routes.scss.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(autop())
     .pipe(miniCSS())
-    .pipe(gulp.dest(routes.sass.dest));
+    .pipe(gulp.dest(routes.scss.dest));
 
 const js = () => gulp.src(routes.js.src)
   .pipe(
@@ -61,7 +61,7 @@ const webserver = () =>
 
 const watch = () => {
   gulp.watch(routes.pug.watch, pug);
-  gulp.watch(routes.sass.watch, styles);
+  gulp.watch(routes.scss.watch, styles);
   gulp.watch(routes.js.watch, js);
 }
 // ======= make series ===========   
