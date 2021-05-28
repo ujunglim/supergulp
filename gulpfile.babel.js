@@ -29,7 +29,7 @@ const routes = {
   }
 }
 
-// ======= make tasks ==========
+// =========== make tasks ==============
 const clean = () => del(["build", ".publish"]);
 
 const pug = () => 
@@ -68,11 +68,9 @@ const watch = () => {
   gulp.watch(routes.scss.watch, styles);
   gulp.watch(routes.js.watch, js);
 }
-// ======= make series ===========   
+// =============== make series ===================   
 const prepare = gulp.series([clean]);
-
 const assets = gulp.series([pug, styles, js]);
-
 const live = gulp.parallel([webserver, watch])
 
 export const build = gulp.series([prepare, assets]);
