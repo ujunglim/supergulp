@@ -1,3 +1,5 @@
+// Check for Js task process
+
 import { random } from './util';
 
 const randomOne = random(10);
